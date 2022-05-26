@@ -16,23 +16,20 @@ class Add: public Base {
 	left = val1;
 	right = val2;
 	}
-	~Add() {
-	    delete left;
-            delete right;
-	}
-	double evaluate() override {
+	
+	virtual double evaluate() override {
 	return (this -> left -> evaluate() + this -> right -> evaluate());
 	}
 
-	string stringify() {
+	virtual string stringify() {
 	return ( "(" + this -> left -> stringify() + " + " + this -> right -> stringify() + ")");
 	}
 	
-	int number_of_children() {
+	virtual int number_of_children() {
 	return 2;
 	}
 
-	Base* get_child(int i) {
+	virtual Base* get_child(int i) {
 	if (i == 0) {
 	   return left;
 	}
