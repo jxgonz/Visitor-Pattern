@@ -23,7 +23,7 @@ class Op: public Base {
 	    return this -> value;
 	}
 
-	virtual string stringiry() {
+	virtual string stringify() {
 	    string result = to_string(this -> value);
 	    return result;
 	}
