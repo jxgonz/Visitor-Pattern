@@ -25,5 +25,4 @@ class Iterator {
         Base* current_node();
         int current_index();
 };
-
 #endif
