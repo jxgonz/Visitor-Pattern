@@ -4,6 +4,7 @@
 #include "base.hpp"
 #include "iterator.hpp"
 #include "visitor.hpp"
+#include <iostream>
 
 using namespace std;
 
@@ -36,10 +37,8 @@ class Add: public Base {
 	else if (i == 1) {
 	   return right;	
 	}
-	else if (i == 2) {
 	   return nullptr;
 	}
-	
 	// virtual void accept()
 };
 #endif //__ADD_HPP__

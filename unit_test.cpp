@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 
+#include "op_test.hpp"
 #include "add_test.hpp"
 
 int main(int argc, char **argv) {
