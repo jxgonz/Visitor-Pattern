@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master, gyaye001/accept ]
+    branches: [ master, jgonz563/op, jgonz563/rand, jgonz563/div, jgonz563/pow, jgonz563/accept, jgonz563/VisitorLatex ]
   pull_request:
     branches: [ master ]
 
@@ -24,22 +24,26 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
-       #git submodule
+      
+      # git submodule
       - name: Run submodule
         run: git submodule update --init --recursive
-     
-       # run cmake
+
+      #run cmake
       - name: Run cmake
         run: cmake .
-                     
-       #run make
+
+      # run make
       - name: Run make
         run: make
-                                                          
-       #run tests
-      - name: Run tests
+
+      # run tests
+      - name: run test
         run: ./test
+
+      # run lab
+      - name: Run lab
+        run: ./lab
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
