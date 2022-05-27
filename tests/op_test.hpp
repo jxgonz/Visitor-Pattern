@@ -5,9 +5,8 @@
 
 #include "gtest/gtest.h"
 
-#include "visitor.hpp"
-#include "op.hpp"
-#include "add.hpp"
+#include "../visitor.hpp"
+#include "../op.hpp"
 
 TEST(OpTest, OpEvaluateNonZero) {
     Op* test = new Op(0.0);
@@ -41,7 +40,7 @@ TEST(OpTest, OpEvaluateSmallPos) {
     EXPECT_EQ(test->get_child(0), nullptr);
 }
 
-TEST(OpTest, OpLargPositive) {
+TEST(OpTest, OpEvaluateLargePos) {
     Op* test = new Op(134.7);
     EXPECT_EQ(test->evaluate(), 134.7);
     EXPECT_EQ(test->stringify(), "134.700000");
@@ -49,4 +48,4 @@ TEST(OpTest, OpLargPositive) {
     EXPECT_EQ(test->get_child(0), nullptr);
 }
 
-#endif //__OP_TEST_HPP__ 
+#endif //__OP_TEST_HPP__

@@ -1,19 +1,20 @@
-#ifndef __OP_HPP__
-#define __OP_HPP__
-
+#ifndef __RAND_HPP__
+#define __RAND_HPP__
 #include <iostream>
-
-#include "base.hpp"
-
 using namespace std;
 
-class Op : public Base {
+#include "base.hpp"
+#include "iterator.hpp"
+#include "visitor.hpp"
+
+class Rand : public Base {
     private:
-        double value;
+	double value;
 
     public:
-        Op(double value) : Base() {
-	    this -> value = value;
+        Rand() : Base() {
+	    srand(time(0));
+	    this -> value = rand() % 100;
 	}
 
         virtual double evaluate() {
@@ -31,9 +32,10 @@ class Op : public Base {
 	virtual Base* get_child(int i) {
 	    return nullptr;
 	}
+
 	virtual void accept(Visitor* visitor, int index) {
-	    visitor -> visit_op(this);
-	}
+            visitor -> visit_rand(this);
+        }
 };
 
-#endif //__OP_HPP__
+#endif //__RAND_HPP__
