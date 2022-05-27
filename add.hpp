@@ -18,6 +18,11 @@ class Add: public Base {
 	right = val2;
 	}
 	
+	~Add() {
+	   delete left;
+	   delete right;
+	}	
+
 	virtual double evaluate() override {
 	return (this -> left -> evaluate() + this -> right -> evaluate());
 	}
