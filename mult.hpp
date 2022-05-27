@@ -15,6 +15,11 @@ class Mult: public Base {
 	left = val1;
 	right = val2;
 	}
+	
+	~Mult() {
+	   delete left;
+	   delete right;
+        }
 
         virtual double evaluate() override {
 	return (this -> left -> evaluate() * this -> right -> evaluate());
