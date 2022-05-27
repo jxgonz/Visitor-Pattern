@@ -35,8 +35,9 @@ class Op: public Base {
 	virtual int number_of_children() {
 	    return 0;
 	}
-	//virtual void accept(Visitor* visitor, int index) {
-	//	//	visitor -> visit_op(this);
-	//		//	}
+	
+	virtual void accept(Visitor* visitor, int index) {
+	   visitor -> visit_op(this);
+	}
 };
 #endif //__OP_HP__
