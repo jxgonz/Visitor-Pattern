@@ -1,10 +1,6 @@
 #ifndef __OP_TEST_HPP__
 #define __OP_TEST_HPP__
-
-#include <string>
-
 #include "gtest/gtest.h"
-
 #include "visitor.hpp"
 #include "op.hpp"
 

@@ -33,6 +33,9 @@ class Rand : public Base {
 	    return nullptr;
 	}
 
+	virtual void accept(Visitor* visitor, int index) {
+            visitor -> visit_rand(this);
+        }
 };
 
 #endif //__RAND_HPP__

@@ -1,6 +1,7 @@
 #ifndef __RAND_TEST_HPP__
 #define __RAND_TEST_HPP__
 #include "gtest/gtest.h"
+#include "visitor.hpp"
 #include "rand.hpp"
 
 using namespace std;
