@@ -16,6 +16,11 @@ class Sub: public Base {
 	left = val1;
 	right = val2;
 	}
+ 
+        ~Sub() {
+	   delete left;
+	   delete right;
+	}
 	
 	virtual double evaluate() override {
 	return (this -> left -> evaluate() - this -> right -> evaluate());
