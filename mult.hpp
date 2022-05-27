@@ -1,4 +1,4 @@
-fndef __MULT_HPP__
+#ifndef __MULT_HPP__
 #define __MULT_HPP__
 
 #include "base.hpp"
