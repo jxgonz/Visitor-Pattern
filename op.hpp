@@ -25,6 +25,7 @@ class Op : public Base {
 
 	virtual int number_of_children() {
 	    return 0;
+
 	}
 
 	virtual Base* get_child(int i) {
@@ -32,8 +33,7 @@ class Op : public Base {
 	}
 
 	virtual void accept(Visitor* visitor, int index) {
-	    visitor -> visit_op(this);
+	   visitor -> visit_op(this);
 	}
 };
-
-#endif //__OP_HPP__
+#endif //__OP_HP__
