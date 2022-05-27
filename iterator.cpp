@@ -41,3 +41,5 @@ int Iterator::current_index()
 {
     return node_stack.top().index;
 }
+
+
